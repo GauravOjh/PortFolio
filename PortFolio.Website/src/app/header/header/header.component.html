@@ -1,5 +1,5 @@
 <div>
-    <section class="banner" #banner>
+    <section [ngClass]="{'day': isDay, 'night': !isDay}" class="banner" #banner>
         <header>
             <a class="logo">{{name}}</a>
             <ul>
@@ -10,15 +10,15 @@
             </ul>
         </header>
         <div class="content">
-            <h2>I am <span id="text">Gaurav Ojha</span></h2>
+            <h2>I am <span id="text"></span></h2>
             <p>Let's Break the Matrix</p>
             <button>Join Us</button>
             <button class="chat">Let's Chat</button>
         </div>
 
-        <div class="dayNight">
-            <ion-icon name="moon-outline"></ion-icon>
-            <ion-icon name="sunny-outline"></ion-icon>
+        <div class="dayNight" (click)="toggleDayNight()">
+            <ion-icon *ngIf="isDay" name="moon-outline"></ion-icon>
+            <ion-icon *ngIf="!isDay" name="sunny-outline"></ion-icon>
         </div>
     </section>
 </div>

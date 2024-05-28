@@ -112,6 +112,24 @@ header ul li a{
     font-size: 2em;
 }
 
-.banner .night{
+
+.banner.day {
+    background-color: #fff;  
+}
+  
+.banner.night {
     background: #333;
+}
+  
+.dayNight {
+ cursor: pointer;
+}
+
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night header ul li a
+{
+  color: #fff;
 }
