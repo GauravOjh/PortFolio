@@ -1,1 +1,135 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+.banner{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 100vh;
+    padding: 100px;
+    background: #fff;
+    transition: 0.5s;
+}
+
+header{
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    display: flex;
+    padding: 20px 100px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo{
+    color:#333;
+    text-decoration: none;
+    font-size: 2em;
+    font-weight: 700;
+    transition: 0.5s;
+}
+
+header ul{
+    gap:40px;
+    display: flex;
+}
+
+header ul li{
+    list-style-type: none;
+}
+
+header ul li a{
+    font-weight: 500;
+    font-size: 1.2em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.content{
+    position: relative;
+    max-width: 700px;
+}
+
+.content h2{
+    font-size: 5.5em;
+    color: #333;
+    transition: 0.5s;
+}
+
+.content h2 span{
+    color: orange;
+}
+
+.content p{
+    color: #666;
+    font-size: 1.2em;
+    margin: 10px 0;
+    transition: 0.5s;
+}
+
+.content button{
+    position: relative;
+    background:orange;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    padding:15px 35px;
+    letter-spacing: 0.05em;
+    font-size: 1.25em;
+    margin-right: 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.content button.chat{
+    color:#333;
+    background: transparent;
+}
+
+.dayNight{
+    position: absolute;
+    bottom: 25px;
+    left:50%;
+    width:60px;
+    height:60px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #c8aeae;
+    border-radius: 50%;
+    transition: 0.5s;
+    font-size: 2em;
+}
+
+
+.banner.day {
+    background-color: #fff;  
+}
+  
+.banner.night {
+    background: #333;
+}
+  
+.dayNight {
+ cursor: pointer;
+}
+
+.banner.night header .logo,
+.banner.night .content h2,
+.banner.night .content p,
+.banner.night .content button.chat,
+.banner.night header ul li a
+{
+  color: #fff;
+}

@@ -1,0 +1,24 @@
+<div>
+    <section [ngClass]="{'day': isDay, 'night': !isDay}" class="banner" #banner>
+        <header>
+            <a class="logo">{{name}}</a>
+            <ul>
+                <li><a routerLink="">{{home}}</a></li>
+                <li><a routerLink="">{{work}}</a></li>
+                <li><a routerLink="">{{about}}</a></li>
+                <li><a routerLink="">{{contact}}</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <h2>I am <span id="text"></span></h2>
+            <p>Let's Break the Matrix</p>
+            <button>Join Us</button>
+            <button class="chat">Let's Chat</button>
+        </div>
+
+        <div class="dayNight" (click)="toggleDayNight()">
+            <ion-icon *ngIf="isDay" name="moon-outline"></ion-icon>
+            <ion-icon *ngIf="!isDay" name="sunny-outline"></ion-icon>
+        </div>
+    </section>
+</div>
